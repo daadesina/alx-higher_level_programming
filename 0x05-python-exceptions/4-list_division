@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+'''
+- create a new_list
+- if len(list1) == len(list2): do the exceution
+- try: ...
+- For loop to get the elements
+- divide each elemen and store the value in new_list
+- except ZeroDivisionError:
+    print("division by 0")
+- except NameError:
+    print(wrong type)
+- else: print("out of range") '''
+
+
+def list_division(my_list_1, my_list_2, list_length):
+    try:
+        my_list = []
+        for i in range(len(my_list_2)):
+            d = [my_list_1[i] / my_list_2[i], ]
+            my_list = my_list + d
+        list_length = len(my_list)
+        return (my_list)
+    except (ZeroDivisionError, NameError, IndexError):
+        print("division by 0")
+        print("wrong type")
+        print("out of range")
+    finally:
+        pass
