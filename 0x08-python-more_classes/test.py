@@ -1,19 +1,10 @@
 #!/usr/bin/python3
-"""A module of a class
-"""
 
 
-class Rectangle:
-    def __init__(self, name):
-        self.__name = name
+w = 2;
+h = 4;
 
-    @property
-    def mymy(self):
-        return self.__name
+#for i in range(h):
+ #   print(2 * "#", end="")
 
-    @mymy.setter
-    def mymy(self, name):
-        self.__name = name;
-
-ade = Rectangle("adesin")
-print(ade.mymy)
+print(2 * "#" + '\n')
