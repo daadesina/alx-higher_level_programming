@@ -1,17 +1,20 @@
 #!/usr/bin/python3
 
 class Rec:
+    mymy = "#"
     def __init__(self, age):
         self.__age = age
+        Rec.mymy = self.mymy
 
     def __str__(self):
-        return self.__age * 2
+        return self.mymy
 
     def __repr__(self):
-        print("Hey")
+        print(Hey)
         return "Rectangle(" + self.__age + ")"
 
 ade = Rec("5");
-#print (eval(repr(ade)))
 
-print(repr(ade))
+ade.mymy = "c"
+
+print(ade)
