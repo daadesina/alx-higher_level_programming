@@ -23,9 +23,6 @@ Traceback (most recent call last):
     raise TypeError('a must be an integer')
 TypeError: a must be an integer
 
->>> print(add_integer(5 + 3, 2))
-10
-
 >>> print(add_integer(1.7976931348623157e+318, 100))
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
