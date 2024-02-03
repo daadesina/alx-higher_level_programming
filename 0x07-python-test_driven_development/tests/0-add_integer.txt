@@ -1,4 +1,14 @@
-"""Return the addition of a and b, an exact integer >= 0.
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
 >>> add_integer(2, 3)
 5
 >>> add_integer(2, 3)
@@ -7,14 +17,4 @@
 5
 >>> add_integer(2, 3)
 5
->>> add_integer(2, 3)
-5
->>> add_integer(2, 3)
-5
->>> add_integer(2, 3)
-5
->>> add_integer(2, 3)
-5
->>> add_integer(2, 3)
-5
-"""
+
