@@ -3,6 +3,8 @@
 
 
 def add_integer(a, b=98):
+    """An add integer function"""
+
     if isinstance(a, float):
         a = int(a)
     if isinstance(b, float):
