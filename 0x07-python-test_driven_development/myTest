@@ -1,12 +1,22 @@
 #!/usr/bin/python3
 
-name = "Adesina. is a. good boy."
+name = " Adesina. is a. good boy."
 
 print(name[2])
 
+mymy = ""
+
 for i in range(len(name)):
-    print(name[i], end="")
-    if name[i-1] == '.' and name[i] == ' ':
-        print()
-        continue
+    mymy = mymy + name[i]
+    if name[i] == '.':
+        mymy = mymy + '\n'
     #print(name[i], end="")
+
+for i in range(len(mymy)):
+    print(mymy[i].lstrip(), end="")
+    if mymy[i-1] == '\n':
+        continue
+
+
+
+print(mymy.strip())
