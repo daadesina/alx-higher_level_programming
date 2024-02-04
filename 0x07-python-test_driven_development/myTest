@@ -1,38 +1,7 @@
 #!/usr/bin/python3
 
-matrix = [
-    [10, 20, 30],
-    [40, 50, 20]
-]
+print("This is {}".format("adesina"))
 
-row = len(matrix)
-col = len(matrix[0])
+name = "adesina"
 
-new_mat = []
-
-for i in range(row):
-    for j in range(col):
-        matrix[i][j] = matrix[i][j] / 2
-        new_mat = new_mat +  [matrix[i][j], ]
-
-result_mat = [[0 for i in range(col)] for j in range(row)]
-
-for i in range(row):
-    for j in range(col):
-        result_mat[i][j] = matrix[i][j] / 2
-
-print(new_mat)
-
-print(result_mat)
-
-for i in range(row - 1):
-    if len(matrix[i]) == len(matrix[i+1]):
-        print("SAME")
-    else:
-        print("NOT")
-
-
-print("I am" + "very" \
-        + "good")
-
-#print(n)
+print(type(name))
