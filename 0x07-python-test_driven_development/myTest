@@ -5,7 +5,8 @@ name = "Adesina. is a. good boy."
 print(name[2])
 
 for i in range(len(name)):
+    print(name[i], end="")
     if name[i-1] == '.' and name[i] == ' ':
         print()
         continue
-    print(name[i], end="")
+    #print(name[i], end="")

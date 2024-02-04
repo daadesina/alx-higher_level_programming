@@ -9,6 +9,7 @@ def text_indentation(text):
         raise TypeError('text must be a string')
 
     for i in range(len(text)):
+        print(text[i], end="")
         if text[i - 1] == '.' and text[i] == ' ':
             print()
             print()
@@ -21,7 +22,4 @@ def text_indentation(text):
             print()
             print()
             continue
-
-        print(text[i], end="")
-    print()
     print()
