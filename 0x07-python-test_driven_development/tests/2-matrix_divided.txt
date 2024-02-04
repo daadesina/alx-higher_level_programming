@@ -42,3 +42,5 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> print(matrix_divided(matrix, float('inf')))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
