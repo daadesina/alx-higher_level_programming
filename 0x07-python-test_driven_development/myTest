@@ -1,0 +1,29 @@
+#!/usr/bin/python3
+
+matrix = [
+    [10, 20, 30],
+    [40, 50, 60]
+]
+
+row = len(matrix)
+col = len(matrix[0])
+
+new_mat = []
+
+for i in range(row):
+    for j in range(col):
+        matrix[i][j] = matrix[i][j] / 2
+        new_mat = new_mat +  [matrix[i][j], ]
+
+result_mat = [[0 for i in range(col)] for j in range(row)]
+
+for i in range(row):
+    for j in range(col):
+        result_mat[i][j] = matrix[i][j] / 2
+
+print(new_mat)
+
+print(result_mat)
+
+
+
