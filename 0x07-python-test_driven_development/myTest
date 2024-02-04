@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-print("This is {}".format("adesina"))
+size = 5
 
-name = "adesina"
-
-print(type(name))
+for i in range(size):
+    for j in range(size):
+        print("#", end="")
+    print()
