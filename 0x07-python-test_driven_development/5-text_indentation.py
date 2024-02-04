@@ -22,4 +22,3 @@ def text_indentation(text):
             print()
             print()
             continue
-    print()
