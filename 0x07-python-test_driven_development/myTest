@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 
-size = 5
+name = "Adesina. is a. good boy."
 
-for i in range(size):
-    for j in range(size):
-        print("#", end="")
-    print()
+print(name[2])
+
+for i in range(len(name)):
+    if name[i-1] == '.' and name[i] == ' ':
+        print()
+        continue
+    print(name[i], end="")
