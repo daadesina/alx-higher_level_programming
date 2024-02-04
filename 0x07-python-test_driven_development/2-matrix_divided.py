@@ -26,7 +26,7 @@ def matrix_divided(matrix, div):
             elif isinstance(matrix[i][j], float):
                 new_mat[i][j] = round((matrix[i][j] / div), 2)
             else:
-                raise TypeError('matrix must be a matrix of integers/floats')
+                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
     
 
 
