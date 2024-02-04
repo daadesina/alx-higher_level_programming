@@ -11,6 +11,13 @@ def matrix_divided(matrix, div):
 
     new_mat = [[0 for i in range(col)] for j in range(row)]
 
+    if isinstance(div, int):
+        pass
+    elif isinstance(div, float):
+        pass
+    else:
+        raise TypeError('div must be a number')
+
     for i in range(row - 1):
         if len(matrix[i]) == len(matrix[i + 1]):
             pass
