@@ -19,3 +19,14 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 >>> say_my_name("White")
 My name is White 
+>>> say_my_name("White", 12)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/adesina/Documents/alx-software_engineering/daadesina1/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 10, in say_my_name
+    raise TypeError('last_name must be a string')
+TypeError: last_name must be a string
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
