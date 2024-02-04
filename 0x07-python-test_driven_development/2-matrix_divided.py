@@ -18,6 +18,11 @@ def matrix_divided(matrix, div):
     else:
         raise TypeError('div must be a number')
 
+    if div == 0:
+        raise ZeroDivisionError('division by zero')
+    else:
+        pass
+
     for i in range(row - 1):
         if len(matrix[i]) == len(matrix[i + 1]):
             pass
