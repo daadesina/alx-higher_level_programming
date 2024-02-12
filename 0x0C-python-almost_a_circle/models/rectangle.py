@@ -95,3 +95,48 @@ class Rectangle(Base):
                 print('#', end="")
             print()
         print(self.__width * '#')
+
+
+    def __str__(self):
+        return (f'[{type(self).__name__}]  ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}')
+
+    def display(self):
+        if (self.__y != 0):
+            for i in range(self.__y):
+                print()
+        for i in range(self.__height):
+            print((self.__x) * " ", end="") 
+            for j in range(self.__width):
+                print("#", end="")
+            print()
+
+    def update(self, *args):
+
+        myList = []
+        for i in args:
+            myList = myList + [i, ]
+
+        if len(myList) == 1:
+            self.id = myList[0]
+
+        if len(myList) == 2:
+            self.id = myList[0]
+            self.__width = myList[1]
+
+        if len(myList) == 3:
+            self.id = myList[0]
+            self.__width = myList[1]
+            self.__height = myList[2]
+
+        if len(myList) == 4:
+            self.id = myList[0]
+            self.__width = myList[1]
+            self.__height = myList[2]
+            self.__x = myList[3]
+
+        if len(myList) == 5:
+            self.id == myList[0]
+            self.__width = myList[1]
+            self.__height = myList[2]
+            self.__x = myList[3]
+            self.__y = myList[4]
