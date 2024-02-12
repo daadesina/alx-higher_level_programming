@@ -6,6 +6,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
+    '''A class'''
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
         self.__height = height
@@ -13,7 +14,6 @@ class Rectangle(Base):
         self.__y = y
 
         super().__init__(id)
-
 
         if type(width) is not int:
             raise TypeError('width must be an integer')
@@ -33,7 +33,6 @@ class Rectangle(Base):
         elif y < 0:
             raise ValueError('y must be >= 0')
 
-
     @property
     def width(self):
         return (self.__width)
@@ -50,13 +49,14 @@ class Rectangle(Base):
     @property
     def height(self):
         return (self.__height)
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value <= 0:
             raise ValueError('height must be > 0')
-        
+
         self.__height = value
 
     @property
@@ -69,7 +69,7 @@ class Rectangle(Base):
             raise TypeError('x must be an integer')
         if value < 0:
             raise ValueError('x must be >= 0')
-        
+
         self.__x = value
 
     @property
@@ -85,7 +85,6 @@ class Rectangle(Base):
 
         self.__y = value
 
-
     def area(self):
         return (self.__height * self.__width)
 
@@ -96,21 +95,22 @@ class Rectangle(Base):
             print()
         print(self.__width * '#')
 
-
     def __str__(self):
-        return (f'[{type(self).__name__}]  ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}')
+        return (f'[{type(self).__name__}] '
+                + f'({self.id}) {self.__x}/{self.__y} - '
+                + f'{self.__width}/{self.__height}')
 
     def display(self):
         if (self.__y != 0):
             for i in range(self.__y):
                 print()
         for i in range(self.__height):
-            print((self.__x) * " ", end="") 
+            print((self.__x) * " ", end="")
             for j in range(self.__width):
                 print("#", end="")
             print()
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
 
         myList = []
         for i in args:
@@ -140,3 +140,19 @@ class Rectangle(Base):
             self.__height = myList[2]
             self.__x = myList[3]
             self.__y = myList[4]
+
+        iList = []
+        for i, j in kwargs.items():
+            iList = iList + [i, j]
+
+        for n in range(len(iList)):
+            if iList[n - 1] == "height":
+                self.__height = iList[n]
+            elif iList[n - 1] == "width":
+                self.__width = iList[n]
+            elif iList[n - 1] == "x":
+                self.__x = iList[n]
+            elif iList[n - 1] == "y":
+                self.__y = iList[n]
+            elif iList[n - 1] == "id":
+                self.id = iList[n]
