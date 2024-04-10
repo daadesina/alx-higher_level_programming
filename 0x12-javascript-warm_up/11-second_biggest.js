@@ -2,30 +2,38 @@
 
 const argv = require('process');
 
-let myList = [];
-
-let num = (process.argv.length - 1);
-
-let count = 0;
-
-while (num > 1)
+if (isNaN(process.argv[2]) || isNaN(process.argv[3]))
 {
-	myList[count] = Number(process.argv[num]);
-	count++;
-	num--;
+	console.log('0');
 }
-
-let biggest = Math.max.apply(null, myList);
-let index = myList.length;
-while (index >= 0)
+else
 {
-	if (myList[index] == biggest)
+
+	let myList = [];
+
+	let num = (process.argv.length - 1);
+
+	let count = 0;
+
+	while (num > 1)
 	{
-		break;
+		myList[count] = Number(process.argv[num]);
+		count++;
+		num--;
 	}
-	index--;
+
+	let biggest = Math.max.apply(null, myList);
+	let index = myList.length;
+	while (index >= 0)
+	{
+		if (myList[index] == biggest)
+		{
+			break;
+		}
+		index--;
+	}
+
+	let newList = myList.slice(0, index).concat(myList.slice(index + 1));
+
+	console.log(Math.max.apply(null, newList));
 }
-
-let newList = myList.slice(0, index).concat(myList.slice(index + 1));
-
-console.log(Math.max.apply(null, newList));
