@@ -1,14 +1,18 @@
 #!/usr/bin/node
 
 const argv = require('process');
-let num = Number(process.argv[2]);
-let count = num;
-let result = Number(1);
+let num;
 
-while (count > 0)
+function myFactorial(num)
 {
-	result = result * count;
-	count--;
+	if (num > 0)
+	{
+		return (num * myFactorial(num - 1));
+	}
+	else
+	{
+		return 1;
+	}
 }
 
-console.log(result);
+console.log(myFactorial(process.argv[2]));
